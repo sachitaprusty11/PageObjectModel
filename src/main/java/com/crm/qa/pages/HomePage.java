@@ -6,10 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.crm.qa.base.TestBase;
+//Need to LOOK On it it was failing
 
 public class HomePage extends TestBase {
 
-	@FindBy(xpath = "//td[contains(text(),'User: Naveen K')]")
+	@FindBy(xpath = "//font[contains(text(),'User: Naveen K')]")
 	WebElement userNameLabel;
 
 	@FindBy(xpath = "//a[contains(text(),'Contacts')]")

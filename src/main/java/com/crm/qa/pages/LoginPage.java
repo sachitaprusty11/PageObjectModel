@@ -24,7 +24,7 @@ public class LoginPage extends TestBase {
 	@FindBy(xpath="//img[contains(@class,'img-responsive')]")
 	WebElement crmLogo;
 	
-	//Initialization
+	//Initialization of page object
 	public LoginPage(){
 		PageFactory.initElements(driver, this);
 	}

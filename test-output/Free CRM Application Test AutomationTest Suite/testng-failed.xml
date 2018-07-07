@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Free CRM Application Test AutomationTest Suite]">
+  <listeners>
+    <listener class-name="com.crm.qa.extentreportlistener.ExtentReportListener"/>
+  </listeners>
   <test name="Free CRM Test(failed)">
     <classes>
-      <class name="com.crm.qa.testcases.LoginPageTest">
+      <class name="com.crm.qa.testcases.ContactsPageTest">
         <methods>
-          <include name="crmLogoImageTest"/>
-          <include name="setup"/>
+          <include name="selectMultipleContactsTest"/>
           <include name="teardown"/>
-          <include name="loginTest"/>
+          <include name="validateCreateNewContact"/>
+          <include name="setUpHomePage"/>
         </methods>
-      </class> <!-- com.crm.qa.testcases.LoginPageTest -->
+      </class> <!-- com.crm.qa.testcases.ContactsPageTest -->
     </classes>
   </test> <!-- Free CRM Test(failed) -->
 </suite> <!-- Failed suite [Free CRM Application Test AutomationTest Suite] -->

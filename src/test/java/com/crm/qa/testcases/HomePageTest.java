@@ -49,7 +49,7 @@ public class HomePageTest extends TestBase{
 		testUtil.switchToFrame();
 		contactsPage = homePage.clickOnContactsLink();
 	}
-	
+
 	@AfterMethod
 	public void teardown(){
 		driver.quit();

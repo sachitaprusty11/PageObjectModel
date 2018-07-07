@@ -1,9 +1,13 @@
 package com.crm.qa.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.crm.qa.base.TestBase;
 //Need to LOOK On it it was failing
@@ -19,7 +23,6 @@ public class HomePage extends TestBase {
 	@FindBy(xpath = "//a[contains(text(),'New Contact')]")
 	WebElement newContactLink;
 	
-
 	@FindBy(xpath = "//a[contains(text(),'Deals')]")
 	WebElement dealsLink;
 
@@ -55,10 +58,10 @@ public class HomePage extends TestBase {
 	}
 	
 	public void clickOnNewContactLink(){
-		Actions action = new Actions(driver);
-		action.moveToElement(contactsLink).build().perform();
-		newContactLink.click();
 		
+		Actions act= new Actions(driver);
+		act.moveToElement(contactsLink).build().perform();
+		newContactLink.click();
 	}
 	
 }
